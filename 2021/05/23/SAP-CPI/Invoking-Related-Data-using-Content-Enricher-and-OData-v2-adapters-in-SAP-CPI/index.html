@@ -2,61 +2,25 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXK90P93EF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-ZXK90P93EF');
+  </script>
+
+
+    <meta charset="utf-8">
     
     <title>Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI | SAP Integration Design</title>
-
-    <meta name="description" content="SAP Process Integration and Cloud Platform Integration">
-    <meta name="keywords" content="">
-
-    
-
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content= "Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI | SAP Integration Design"  />
-    <meta property="og:description" content= "SAP Process Integration and Cloud Platform Integration" />
-    <meta property="og:url" content="https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/index.html" />
-    <meta property="og:site_name" content="" />
-    <meta property="article:author" content="Sefa" />
-    <meta property="article:publisher" content="" />
-    <meta property="og:description" content="SAP Process Integration and Cloud Platform Integration" />
-    <meta name="twitter:title" content="Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI | SAP Integration Design"/>
-    <meta name="twitter:description" content="SAP Process Integration and Cloud Platform Integration"/>
-    <script type="application/ld+json">
-        {
-            "description": "SAP Process Integration and Cloud Platform Integration",
-            "author": { "@type": "Person", "name": "Sefa" },
-            "@type": "BlogPosting",
-            "url": "https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/index.html",
-            "publisher": {
-            "@type": "Organization",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://sefaarslan.github.io/integrationdesignhttps://sapintegrationdesign.com/images/sidlogo.png"
-            },
-            "name": "Sefa"
-            },
-            "headline": "Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI | SAP Integration Design",
-            "datePublished": "2021-05-23T10:34:00.000Z",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/index.html"
-            },
-            "@context": "http://schema.org"
-        }
-    </script>
-
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
 
     
-    <meta property="algolia:search" data-application-id="67IWBPGSH1" data-api-key="04eba6dc43d3f0c561919d5393d07129" data-index-name="prod_sapintegrationdesign">
-    
-
+        <meta property="algolia:search" data-application-id="67IWBPGSH1" data-api-key="04eba6dc43d3f0c561919d5393d07129" data-index-name="prod_sapintegrationdesign">
     
 
     
@@ -73,8 +37,6 @@
 <link rel="stylesheet" href="/dist/build.css?v=1654266144177.css">
 
 
-    
-<link rel="stylesheet" href="/dist/custom.css?v=1654266144177.css">
 
 
     <script>
@@ -97,9 +59,13 @@
         window.aomori_logo_typed_animated = true
         window.aomori_search_algolia = true
 
+
     </script>
 
+
+
 <meta name="generator" content="Hexo 5.4.0"></head>
+
 
 <body>
 
@@ -108,7 +74,7 @@
         <div class="header-type">
             
             <div class="header-type-avatar avatar avatar-sm">
-                <img src="https://sapintegrationdesign.com/images/sidlogo.png" alt="Sefa">
+              <img src="https://sapintegrationdesign.com/images/sidlogo.png" alt="Sefa">
             </div>
             
             <div class="header-type-inner">
@@ -118,7 +84,7 @@
                     </div>
                     <a class="header-type-title" id="typed" href="/"></a>
                 
-    
+
                 
             </div>
         </div>
@@ -135,11 +101,11 @@
             <div class="header-menu-social">
                 
     <a class="social" target="_blank" href="https://www.linkedin.com/in/sefa-arslan/">
-        <ion-icon name="linkedin-square"></ion-icon>
+        <box-icon type='logo' name='linkedin-square'></box-icon>
     </a>
 
     <a class="social" target="_blank" href="">
-        <ion-icon name=""></ion-icon>
+        <box-icon type='' name=''></box-icon>
     </a>
 
             </div>
@@ -174,6 +140,7 @@
 
 </div>
 
+
     <div class="container">
         <div class="main">
             <section class="inner">
@@ -183,21 +150,26 @@
     itemprop="blogPost">
 
     <div class="article-inner">
-
         
           
         
-        
+
         
 
         
         <header class="article-header">
+
             
   
+
     <h1 class="article-title" itemprop="name">
+      <box-icon name='right-arrow' type='solid' animation='fade-left' color='#3c4859' size="20px" ></box-icon>
+
       Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI
     </h1>
   
+
+
 
         </header>
         
@@ -207,6 +179,7 @@
             <div class="article-date">
   <time datetime="2021-05-23T10:34:00.000Z" itemprop="datePublished">2021-05-23</time>
 </div>
+
 
             
             <div class="article-category">
@@ -220,15 +193,11 @@
             </div>
             
 
-            
-            <div class="article-busuanzi">
-                <span id="busuanzi_value_page_pv">N</span> 人看过
-            </div>
-            
 
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+
             <p>In this blog post, you will learn how to use a Content Enrich and more than one Odata adapters in SAP Cloud Platform Integration. In this direction, you will see the process of filtering from two different OData services on the basis of desired values and merging filtered records using Content Enricher.Also, all integrations may needs have one or more Enrich steps. Generally, the adapter connected to the Content Enricher invokes in all data from the backend system.This situation causing crashes and performance degradation.</p>
 <p>That’s why, we will model integration flow to handling large data is using dynamic queries using <strong>property</strong> and OData v2 <strong>$filter</strong> query option. In this example, we will be enriching <strong>EmpJob</strong> entity with <strong>TimeAccount</strong> by creating a dynamic filter in Successfactors OData v2 adapter.</p>
 <p><strong><h6>The Scenario</h6></strong></p>
@@ -259,6 +228,7 @@
 
     
 
+
     
 
     
@@ -267,7 +237,7 @@
 <nav class="article-nav">
   
     <a href="/2021/05/30/SAP-CPI/Collecting-a-field-from-different-OData-Service-and-Use-it-to-SuccessFactor-Query-in-SAP-CPI/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-caption">Previous Post</div>
       <div class="article-nav-title">
         
           Collecting a field from different OData Service and Use it to SuccessFactor Query in SAP CPI
@@ -277,32 +247,37 @@
   
   
     <a href="/2021/05/03/SAP-CPI/Adding-Filter-Parameters-to-Request-URL-using-Groovy-Script-in-SAP-CPI/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-caption">Next Post</div>
       <div class="article-nav-title">Adding Filter Parameters to Request URL using Groovy Script in SAP CPI</div>
     </a>
   
 </nav>
 
 
+    
+    <div class="article-busuanzi"><box-icon name='book-reader' color='#3c4859' size="15px" ></box-icon><strong> Visitor Count:
+         <span id="busuanzi_value_page_pv">N</span></strong>
+    </div>
+    
+
+
     <section class="share">
-        <div class="share-title">分享</div>
+        <div class="share-title">SHARE</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI - SAP Integration Design&url=https%3A%2F%2Fsefaarslan.github.io%2Fintegrationdesign%2F2021%2F05%2F23%2FSAP-CPI%2FInvoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI%2F">
-            <ion-icon name="logo-twitter"></ion-icon>
+            href="https://twitter.com/share?text=Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI - SAP Integration Design&url=https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/">
+            <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI - SAP Integration Design&u=https%3A%2F%2Fsefaarslan.github.io%2Fintegrationdesign%2F2021%2F05%2F23%2FSAP-CPI%2FInvoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI%2F">
-            <ion-icon name="logo-facebook"></ion-icon>
+            href="https://www.facebook.com/sharer.php?title=Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI - SAP Integration Design&u=https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
-        <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=Invoking Related Data using Content Enricher and OData v2 adapters in SAP CPI - SAP Integration Design&url=https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/&pic=">
-            <div class="n-icon n-icon-weibo"></div>
-        </a> -->
+        <a class="share-item" target="_blank"
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https://sefaarslan.github.io/integrationdesign/2021/05/23/SAP-CPI/Invoking-Related-Data-using-Content-Enricher-and-OData-v2-adapters-in-SAP-CPI/">
+            <box-icon name='linkedin-square' type='logo' ></box-icon>
+        </a>
     </section>
 
 </article>
-
-
 
 
 
@@ -319,9 +294,8 @@
 
 
 
-
-
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 </div>
                 </section>
@@ -329,13 +303,14 @@
 
             
             <aside class="sidebar sidebar-search-fix">
+            
                 
 
     <div class="search">
     <div class="has-icon-right">
         <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
         <div class="form-icon">
-            <ion-icon name="search"></ion-icon>
+            <box-icon name='search' color="#3c4859"></box-icon>
         </div>
     </div>
     <div class="search-result" id="search-ps"></div>
@@ -407,8 +382,14 @@
   <div class="widget-wrap widget-archive">
     <div class="widget-title"><span>Archive</span></div>
     <div class="widget-inner">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">2021</a></li></ul>
+        </div>
+  <div class="widget-wrap widget-cate">
+          <div class="widget-title"><span>Others</span></div>
+      <div class="widget-inner">
+      <box-icon name='send' flip='vertical' size="xs" animation='tada' color='#3c4859' ></box-icon><a href="/contact/"<a> Contact Us</a>
     </div>
+
   </div>
 
 
@@ -417,7 +398,6 @@
 
 <div id="backtop"><i class="icon icon-arrow-up"></i></div>
             </aside>
-            
         </div>
     </div>
 
@@ -426,18 +406,14 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </div>
 
-    <!-- Please do not remove this -->
-    <!-- 开源不易，请勿删除 -->
     <div class="footer-wrap">
-        <div class="footer-inner"> 
+        <div class="footer-inner">
             SAP Integration Design &copy; 2022<br>
-            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a>
+            Powered By Hexo · Theme By <a href="https://sapintegrationdesign.com/" target="_blank">Aomori</a> · Developed by Sefa Arslan
         </div>
     </div>
 
 </footer>
-
-<script type="module" src="https://unpkg.com/ionicons@6.0.2/dist/ionicons/ionicons.esm.js"></script>
 
 
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
@@ -468,10 +444,6 @@
         s.parentNode.insertBefore(bp, s);
     })();
 </script>
-
-
-
-
 
 
 
