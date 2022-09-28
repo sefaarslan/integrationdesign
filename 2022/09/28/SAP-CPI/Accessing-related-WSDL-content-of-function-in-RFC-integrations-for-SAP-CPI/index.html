@@ -15,7 +15,7 @@
 
     <meta charset="utf-8">
     
-    <title>Configuring User Defined Message Search in SAP CPI | SAP Integration Technologies</title>
+    <title>Accessing related WSDL content of function in RFC integrations for SAP CPI | SAP Integration Technologies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
 
@@ -146,7 +146,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl8lv96bq0009olll1ufhasjr" class="article article-type-post" itemscope
+    <article id="post-cl8lv96bc0001olll013c7lwn" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -165,7 +165,7 @@
     <h1 class="article-title" itemprop="name">
       <box-icon name='right-arrow' type='solid' animation='fade-left' color='#3c4859' size="20px" ></box-icon>
 
-      Configuring User Defined Message Search in SAP CPI
+      Accessing related WSDL content of function in RFC integrations for SAP CPI
     </h1>
   
 
@@ -177,7 +177,7 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2021-05-03T10:34:00.000Z" itemprop="datePublished">2021-05-03</time>
+  <time datetime="2022-09-28T15:46:43.000Z" itemprop="datePublished">2022-09-28</time>
 </div>
 
 
@@ -189,7 +189,7 @@
 
             
             <div class="article-tag">
-                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/" rel="tag">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpi/" rel="tag">cpi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/integration/" rel="tag">integration</a></li></ul>
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RFC/" rel="tag">RFC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/" rel="tag">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WSDL/" rel="tag">WSDL</a></li></ul>
             </div>
             
 
@@ -198,19 +198,12 @@
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
 
-            <p>Generally, it is not easy to uniquely identify a message required for further analysis when there are many messages in the system. The CPI does not have a function such as User Defined Message Search (UDMS) in PI.</p>
-<p>With the help of two standard headers, this feature can be enabled in Integration Flows to define a message based on a unique or key field from the message content.</p>
-<p>We may use the Application Message ID and Application MessageType for our purposes. This is achieved by filling the message header ‘SAP_ApplicationID’ and ‘SAP_MessageType’ with an appropriate value.It is on the developer to think what is the appropriate value to place in the Application Message ID. This may be a unique value sent by the sending system, or possibly a filename in case of file-based integration.</p>
-<h4>How to configure these parameters</h4>
-
-<p>These headers can be populated using the Content Modifier step.</p>
-<p><strong>SAP_ApplicationID</strong>: Populate the key field from the XPath, camel expression or any supported header types in the content modifier.</p>
-<p><strong>SAP_MessageType</strong>: Configure the name of the key field you are capturing in SAP_Application ID.</p>
-<p>For example;<br>Ex: National Id : 12312132312</p>
-<p>SAP_ApplicationID: //nationalId<br>SAP_MessageType: National Id</p>
-<p><img src="/images/cpi1.png" alt="Alt Text"></p>
-<p>The screenshot below shows how to search a message by national Id.</p>
-<p><img src="/images/cpi2.png" alt="Alt Text"></p>
+            <p>WSDL content of the function may be needed in custom RFC integrations in SAP CPI systems.If there is no PI/PO system in the relevant environment, it is difficult to obtain the WSDL content.In this article, we will talk about how we can access the WSDL content of the function.</p>
+<p>We can access the web service definition content of the remote enabled function that produced in SAP ERP with the following template.</p>
+<p>http://<strong>&lt;domain</strong>&gt;:&lt;<strong>port</strong>&gt;/sap/bc/soap/wsdl/?services=&lt;<strong>function name</strong>&gt;&amp;sap-client=&lt;<strong>client</strong>&gt;</p>
+<p><strong>domain</strong>: Defined server adress of SAP system<br><strong>port</strong>: http port of server <br><strong>function name</strong>: function name<br><strong>client</strong>: client number of SAP system</p>
+<p><strong>For example:</strong><br><a href="http://sapdev.com:8000/sap/bc/soap/wsdl?services=ZMM_C4C_EKIPMAN&amp;sap-client=500">http://sapdev.com:8000/sap/bc/soap/wsdl?services=ZMM_C4C_EKIPMAN&amp;sap-client=500</a></p>
+<p><strong>Prerequisite</strong><br>All services under ‘default host/sap/bc/soap’ must be active in SICF operation code.After activating these services, access to above address will be provided.</p>
 
         </div>
 
@@ -230,19 +223,10 @@
     
 <nav class="article-nav">
   
-    <a href="/2021/05/03/SAP-CPI/Adding-Filter-Parameters-to-Request-URL-using-Groovy-Script-in-SAP-CPI/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">Previous Post</div>
-      <div class="article-nav-title">
-        
-          Adding Filter Parameters to Request URL using Groovy Script in SAP CPI
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/05/01/SAP-PI-PO/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/05/30/SAP-CPI/Collecting-a-field-from-different-OData-Service-and-Use-it-to-SuccessFactor-Query-in-SAP-CPI/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">Next Post</div>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Collecting a field from different OData Service and Use it to SuccessFactor Query in SAP CPI</div>
     </a>
   
 </nav>
@@ -258,15 +242,15 @@
     <section class="share">
         <div class="share-title">SHARE</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=Configuring User Defined Message Search in SAP CPI - SAP Integration Technologies&url=https://sapintegration.tech/2021/05/03/SAP-CPI/Configuring-User-Defined-Message-Search-in-SAP-CPI/">
+            href="https://twitter.com/share?text=Accessing related WSDL content of function in RFC integrations for SAP CPI - SAP Integration Technologies&url=https://sapintegration.tech/2022/09/28/SAP-CPI/Accessing-related-WSDL-content-of-function-in-RFC-integrations-for-SAP-CPI/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=Configuring User Defined Message Search in SAP CPI - SAP Integration Technologies&u=https://sapintegration.tech/2021/05/03/SAP-CPI/Configuring-User-Defined-Message-Search-in-SAP-CPI/">
+            href="https://www.facebook.com/sharer.php?title=Accessing related WSDL content of function in RFC integrations for SAP CPI - SAP Integration Technologies&u=https://sapintegration.tech/2022/09/28/SAP-CPI/Accessing-related-WSDL-content-of-function-in-RFC-integrations-for-SAP-CPI/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.linkedin.com/shareArticle?mini=true&url=https://sapintegration.tech/2021/05/03/SAP-CPI/Configuring-User-Defined-Message-Search-in-SAP-CPI/">
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https://sapintegration.tech/2022/09/28/SAP-CPI/Accessing-related-WSDL-content-of-function-in-RFC-integrations-for-SAP-CPI/">
             <box-icon name='linkedin-square' type='logo' ></box-icon>
         </a>
     </section>
